@@ -3,48 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zuno - Music Player</title>
+  <title>Zuno | Welcome</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h1>ZUNO</h1>
-      <p>Your Personal Music Player</p>
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-    </div>
+    <h1>🎧 Welcome to Zuno</h1>
+    <p class="subtitle">Your Personal Music Space</p>
 
-    <div class="main-content">
-      <div class="section">
-        <h2>All Songs</h2>
-        <div id="songsList" class="items-list">
-          <div class="loading">Loading songs...</div>
-        </div>
-        <div id="songMessage"></div>
-      </div>
+    <!-- Username Input -->
+    <input type="text" id="usernameInput" placeholder="Enter your name..." />
 
-      <div class="section">
-        <h2>Playlists</h2>
-        <div id="playlistsList" class="items-list">
-          <div class="loading">Loading playlists...</div>
-        </div>
-        <div id="playlistMessage"></div>
-      </div>
-    </div>
+    <!-- Start Button -->
+    <button id="startBtn">🚀 Get Started</button>
 
-    <div class="player-section section">
-      <h2>Music Player</h2>
-      <div id="player"></div>
-      <div id="now-playing" class="now-playing">Select a song or playlist to begin</div>
-      <div class="controls">
-        <button onclick="playVideo()">▶️ Play</button>
-        <button onclick="pauseVideo()">⏸️ Pause</button>
-        <button onclick="nextSong()">⏭️ Next</button>
-      </div>
+    <!-- Welcome Message -->
+    <div id="welcomeSection" class="hidden">
+      <p id="welcomeMsg"></p>
     </div>
   </div>
 
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js" defer></script>
 </body>
 </html>

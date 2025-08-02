@@ -8,6 +8,10 @@ const songSchema = new mongoose.Schema({
   album: String,
   genre: String,
   duration: Number, // in seconds
+  isFavorite: {
+    type: Boolean,
+    default: false
+  } ,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date
 });

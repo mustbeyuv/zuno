@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 const songsRouter = require('./routes/songs');
 const playlistsRouter = require('./routes/playlists');
+const userRoutes = require('./routes/users');
 const connectDB = require('./db');
 
 const app = express();
@@ -25,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API routes
 app.use('/songs', songsRouter);
 app.use('/playlists', playlistsRouter);
+app.use('/users', userRoutes);
+
 
 // Serve index.html for root route
 app.get('/src', (req, res) => {

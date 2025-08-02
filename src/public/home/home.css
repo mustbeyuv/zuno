@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#logoutBtn {
+  padding: 0.5rem 1rem;
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+.songs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.song-item {
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 5px;
+}
+
+.song-item button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.song-item button:hover {
+  background: #388e3c;
+}
+
+#player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+#thumbnailPreview {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#seekBar,
+#volumeControl {
+  width: 100px;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
+
+
+#now-playing-info {
+  font-weight: bold;
+}
+
+.player-controls button {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+#youtube-player {
+  display: none; /* We hide the iframe visually */
+}
+
+/* Theme variables */
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --border: #ddd;
+}
+
+[data-theme="dark"] {
+  --bg: #111;
+  --text: #eee;
+  --border: #333;
+}
+
+
+#full-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: var(--bg);
+  color: var(--text);
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#full-player.hidden {
+  display: none;
+}
+
+#youtube-player-frame {
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+}
+
+.player-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-controls button {
+  margin: 0 5px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
