@@ -3,26 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zuno | Welcome</title>
+  <title>Zuno | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎧 Welcome to Zuno</h1>
-    <p class="subtitle">Your Personal Music Space</p>
 
-    <!-- Username Input -->
-    <input type="text" id="usernameInput" placeholder="Enter your name..." />
+    <section id="loginSection">
+      <h1>Welcome to Zuno</h1>
+      <input type="text" id="usernameInput" placeholder="Enter your name..." />
+      <button id="startBtn">Get Started</button>
+    </section>
 
-    <!-- Start Button -->
-    <button id="startBtn">🚀 Get Started</button>
+    <section id="mainApp" class="hidden">
+      <div class="header">
+        <h2>All Songs</h2>
+        <button id="logoutBtn">Logout</button>
+      </div>
 
-    <!-- Welcome Message -->
-    <div id="welcomeSection" class="hidden">
-      <p id="welcomeMsg"></p>
-    </div>
+      <p id="welcomeMsg" class="welcome"></p>
+
+      <div id="songsList"></div>
+
+      <h2>Liked Songs</h2>
+      <div id="likedSongsList"></div>
+    </section>
+
   </div>
-
-  <script src="script.js" defer></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

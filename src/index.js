@@ -34,6 +34,6 @@ app.get('/src', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Zuno server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Zuno server running on http://192.168.1.4:${PORT}`);
 });
